@@ -71,7 +71,9 @@
           <a href="#pricing" class="btn btn-secondary btn-large">Buy Now</a>
         </div>
         <div class="col-md-5 text-center d-none d-md-block">
-          <img src="/assets/ebook-cover.png" alt="The cover of the Net Ninja Pro book" class="img-fluid">
+          <span class="tt" data-bs-placement="bottom" title="Net Ninja Book Cover">
+            <img src="/assets/ebook-cover.png" alt="The cover of the Net Ninja Pro book" class="img-fluid">
+          </span>
         </div>
       </div>
     </div>
@@ -460,6 +462,11 @@
                 class="form-control"
                 placeholder="e.g. mario@example.com"
               />
+              <span class="input-group-text">
+                <span class="tt" data-bs-placement="bottom" title="Enter an email address we can reply to.">
+                  <i class="bi bi-question-circle text-muted"></i>
+                </span>
+              </span>
             </div>
 
             <label for="name" class="form-label">Name:</label>
@@ -474,6 +481,11 @@
                 class="form-control"
                 placeholder="e.g. Mario"
               />
+              <span class="input-group-text">
+                <span class="tt" data-bs-placement="bottom" title="Pretty self-explanitory really...">
+                  <i class="bi bi-question-circle text-muted"></i>
+                </span>
+              </span>
             </div>
 
             <label for="subject" class="form-label">What is your question about?</label>
@@ -503,7 +515,18 @@
   </section>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  >
+  </script>
+  <script>
+    const tooltips = document.querySelectorAll('.tt');
+    tooltips.forEach(t => {
+      new bootstrap.Tooltip(t);
+    });
+  </script>
   </body>
 </body>
 </html>
